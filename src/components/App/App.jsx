@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 import { Searchbar } from '../Searchbar/Searchbar';
-import { getImages } from '../service/image-service';
+import { getImages } from '../../service/image-service';
 import { ImageGallery } from '../ImageGallery/ImageGallery';
 import { Button } from '../Button/Button';
 import { Loader } from '../Loader/Loader';
@@ -90,7 +90,7 @@ const getPhotos = async (query, page) =>{
           )}
           {showModal && (
             <div >
-              <Modal className={css.Container} tags={tags} largeImage={largeImage} closeModal={closeModal}>
+              <Modal className={css.Container} closeModal={closeModal}>
                   <img src={largeImage} alt={tags} />
               </Modal>
             </div>
